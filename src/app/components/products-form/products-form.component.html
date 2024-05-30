@@ -1,0 +1,46 @@
+<h1>Products</h1>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Product name</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="Product name" placeholder="Milk" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="lastName" placeholder="Teine (vitamina B12)" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Brand</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="role" placeholder="Nutri" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Branch offices</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="department" placeholder="Branch three" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="5" [nzXs]="24" nzRequired>Date of Expiry</nz-form-label>
+    <nz-form-control [nzSm]="30" [nzXs]="24">
+      <nz-date-picker formControlName="hireDate"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Price</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+<nz-input-number formControlName="salary" [nzMin]="0" [nzMax]="100000" [nzStep]="100"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+
+</form>
